@@ -13,7 +13,7 @@
 ###cd into blog/mysite
 
 > python manage.py migrate
-> python manage.py load_initial_data
+> python manage.py createsuperuser --noinput --username admin --password admin
 
 > python manage.py runserver
 
