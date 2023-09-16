@@ -1,6 +1,7 @@
 import json
 
 from channels.generic.websocket import WebsocketConsumer
+from asgiref.sync import async_to_sync
 
 
 class CommentConsumer(WebsocketConsumer):
@@ -15,6 +16,14 @@ class CommentConsumer(WebsocketConsumer):
 
     def disconnect(self, close_code):
         pass
+
+    def comment(self, event):
+        self.send(json.dumps(
+            {
+                'type': 'comment',
+                'content': event['content']
+            })
+        )
 
 
 
