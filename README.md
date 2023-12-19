@@ -1,5 +1,4 @@
 # blog
-## This project was created as specification provided by ramailo tech
 ### Feel free to use it as you please.
 
 ## python=>3.10
